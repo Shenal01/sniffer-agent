@@ -36,12 +36,12 @@ git commit -m "Initial commit of Unified Sniffer Agent project"
 
 ### 4. Link to GitHub
 
-Copy the remote repository URL from your GitHub repository (it should look like `https://github.com/YOUR_USERNAME/sniffer-agent.git`). Then run:
+Run this command to link your local project to your GitHub repository:
 
 ```bash
-git remote add origin https://github.com/YOUR_USERNAME/sniffer-agent.git
+git remote add origin https://github.com/sayu-gtss/sniffer-agent.git
 ```
-*(Replace `YOUR_USERNAME` and `sniffer-agent` with your actual GitHub details)*
+*(Ensure you have created a repository named `sniffer-agent` on GitHub first)*
 
 ### 5. Rename Main Branch (Recommended)
 
@@ -61,6 +61,41 @@ git push -u origin main
 
 > [!NOTE]
 > If it's your first time pushing from this machine, you may be prompted to log in to GitHub via a browser or using a Personal Access Token (PAT).
+
+---
+
+## Why Push to GitHub? (Local vs. Remote)
+
+You have already **committed** your code. This means your work is saved in a local database on your computer (`E:` drive).
+
+### What is "Remaining" if you don't push?
+1. **Cloud Backup**: If your computer's hard drive fails or you lose access to it, your code is lost forever. GitHub acts as a secure backup.
+2. **Access from Anywhere**: You can't see your code on `github.com` yet. Pushing makes it visible in the browser.
+3. **Collaboration**: If you want to show this to your professor or teammates, you need it on GitHub so they can download it.
+
+### Commands to finish:
+- `git remote add origin https://github.com/sayu-gtss/sniffer-agent.git`
+- `git push -u origin main`
+
+---
+
+## What files are NOT uploaded? (The `.gitignore` file)
+
+I created a `.gitignore` file in your project. This file tells Git to skip certain files so your repository stays clean and secure.
+
+### Excluded Files List:
+1.  **Build Folders (`unified_sniffer_agent/build/`, `bin/`)**: These contain temporary files created when you compile the C++ code. You don't need them on GitHub because you can recreate them by building the project again.
+2.  **Executables (`*.exe`, `*.obj`)**: The final program files. GitHub should host your **source code**, not the compiled binaries.
+3.  **Large Zip Files (`exfiltrap_v2.0-sniffer_agent.zip`)**: Large archives make the repository slow and are redundant if the files are already in the repo.
+4.  **Sensitive Data (`service-account.json`)**: This file contains your Google Cloud credentials. **NEVER** upload this to a public GitHub repository, or others could access your Google Sheets.
+5.  **External Dependencies (`vcpkg/`, `node_modules/`)**: These are libraries downloaded from elsewhere. It's better to let people download them using the setup scripts rather than bloating your repo.
+6.  **IDE Settings (`.vscode/`, `.idea/`)**: These are your personal VS Code or editor settings, which might not be the same for everyone else.
+
+### How to check what is ignored:
+If you want to see exactly what Git is currently ignoring, run:
+```bash
+git status --ignored
+```
 
 ---
 
@@ -91,6 +126,22 @@ This happens because `vcpkg` has its own `.git` folder. If you want to include a
    git add .
    git commit -m "Initial commit of Unified Sniffer Agent project"
    ```
+
+---
+
+## Can others build the sniffer from my repo?
+
+**Yes!** In fact, this is how professional software development works. You share the **source code** (the "recipe") and others compile it themselves.
+
+### What they need:
+1.  **The Source Code**: They get this when they `git clone` your repository.
+2.  **Tools**: They will need to install CMake and a C++ compiler (like Visual Studio).
+3.  **The Setup Scripts**: I included the scripts in `unified_sniffer_agent/installer/` to help them install prerequisites and build the agent.
+
+### Why this is better than uploading the `.exe`:
+-   **Security**: People prefer to build from source so they know exactly what the code is doing (no hidden viruses).
+-   **Compatibility**: A `.exe` built on your computer might not work on a computer with a different version of Windows or CPU. If they build it themselves, it will be optimized for their machine.
+-   **Cleanliness**: Your repository stays small (a few MBs of code) instead of hundreds of MBs of temporary build files.
 
 ---
 
