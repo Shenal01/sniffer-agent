@@ -1,0 +1,27 @@
+cmake_minimum_required(VERSION 3.20)
+project(MinimalSnifferTest VERSION 1.0.0 LANGUAGES CXX C)
+
+set(CMAKE_CXX_STANDARD 17)
+
+# Point to your manual Npcap SDK
+set(NPCAP_SDK_DIR "C:/NpcapSDK" CACHE PATH "Path to Npcap SDK")
+
+# Include Npcap
+include_directories(${NPCAP_SDK_DIR}/Include)
+
+if (WIN32)
+    # Target dependencies
+    set(LIBS_TO_LINK Ws2_32.lib Iphlpapi.lib)
+    
+    # Check for library architecture (assuming x64)
+    link_directories(${NPCAP_SDK_DIR}/Lib/x64)
+    list(APPEND LIBS_TO_LINK wpcap.lib Packet.lib)
+endif()
+
+add_executable(MinimalSniffer src/minimal_test.cpp)
+
+target_link_libraries(MinimalSniffer PRIVATE ${LIBS_TO_LINK})
+
+if (MSVC)
+    target_compile_definitions(MinimalSniffer PRIVATE _WIN32_WINNT=0x0601)
+endif()

@@ -1,0 +1,48 @@
+cmake_minimum_required(VERSION 3.20)
+project(UnifiedSnifferAgent VERSION 1.0.0 LANGUAGES CXX C)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# Find packages provided by vcpkg
+find_package(fmt CONFIG REQUIRED)
+find_package(nlohmann_json CONFIG REQUIRED)
+find_package(libmariadb CONFIG REQUIRED)
+
+# Npcap / WinPcap (User needs to install Npcap SDK. Assuming it's in C:/Npcap-SDK or via environment variable NPCAP_SDK_DIR)
+# For now, we will add Npcap paths if NPCAP_SDK is provided or search in standard locations.
+set(NPCAP_SDK_DIR "C:/Npcap-SDK" CACHE PATH "Path to Npcap SDK")
+
+if (WIN32)
+    # WinSockets
+    set(LIBS_TO_LINK Ws2_32.lib Iphlpapi.lib)
+    
+    # Add Npcap SDK
+    include_directories(${NPCAP_SDK_DIR}/Include)
+    link_directories(${NPCAP_SDK_DIR}/Lib/x64)
+    # wpcap.lib and Packet.lib
+    list(APPEND LIBS_TO_LINK wpcap.lib Packet.lib)
+endif()
+
+# Source files
+file(GLOB_RECURSE SOURCES "src/*.cpp" "src/*.c")
+
+# Add the executable
+add_executable(UnifiedSnifferAgent ${SOURCES})
+
+# Include directories for our own source
+target_include_directories(UnifiedSnifferAgent PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/src")
+
+# Link the libraries
+target_link_libraries(UnifiedSnifferAgent PRIVATE 
+    fmt::fmt 
+    nlohmann_json::nlohmann_json 
+    libmariadb
+    ${LIBS_TO_LINK}
+)
+
+
+
+if (MSVC)
+    target_compile_definitions(UnifiedSnifferAgent PRIVATE _WIN32_WINNT=0x0601) # Windows 7 or higher
+endif()

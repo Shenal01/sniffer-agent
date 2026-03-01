@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="E:\Year 4 Semester 2\FYP\Exfiltrap-prototype-2\sniffer_agent\unified_sniffer_agent\src\app\agent_app.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Year 4 Semester 2\FYP\Exfiltrap-prototype-2\sniffer_agent\unified_sniffer_agent\src\app\gui.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Year 4 Semester 2\FYP\Exfiltrap-prototype-2\sniffer_agent\unified_sniffer_agent\src\capture\packet_capture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Year 4 Semester 2\FYP\Exfiltrap-prototype-2\sniffer_agent\unified_sniffer_agent\src\capture\packet_dispatcher.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Year 4 Semester 2\FYP\Exfiltrap-prototype-2\sniffer_agent\unified_sniffer_agent\src\capture\pcap_capture.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Year 4 Semester 2\FYP\Exfiltrap-prototype-2\sniffer_agent\unified_sniffer_agent\src\common\ip_utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Year 4 Semester 2\FYP\Exfiltrap-prototype-2\sniffer_agent\unified_sniffer_agent\src\common\json_config.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Year 4 Semester 2\FYP\Exfiltrap-prototype-2\sniffer_agent\unified_sniffer_agent\src\common\logger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Year 4 Semester 2\FYP\Exfiltrap-prototype-2\sniffer_agent\unified_sniffer_agent\src\common\shutdown.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Year 4 Semester 2\FYP\Exfiltrap-prototype-2\sniffer_agent\unified_sniffer_agent\src\common\time_utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Year 4 Semester 2\FYP\Exfiltrap-prototype-2\sniffer_agent\unified_sniffer_agent\src\flows\flow_tracker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Year 4 Semester 2\FYP\Exfiltrap-prototype-2\sniffer_agent\unified_sniffer_agent\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Year 4 Semester 2\FYP\Exfiltrap-prototype-2\sniffer_agent\unified_sniffer_agent\src\parsers\dns_name_decode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Year 4 Semester 2\FYP\Exfiltrap-prototype-2\sniffer_agent\unified_sniffer_agent\src\parsers\dns_parser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Year 4 Semester 2\FYP\Exfiltrap-prototype-2\sniffer_agent\unified_sniffer_agent\src\storage\db_writer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\Year 4 Semester 2\FYP\Exfiltrap-prototype-2\sniffer_agent\unified_sniffer_agent\src\storage\mysql_client.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\Year 4 Semester 2\FYP\Exfiltrap-prototype-2\sniffer_agent\unified_sniffer_agent\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4917C3E0-DC5D-35AB-B020-CAA2E4DB425E}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

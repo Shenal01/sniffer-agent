@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <ProjectOutputs>
+    <ProjectOutput>
+      <FullPath>E:\Year 4 Semester 2\FYP\Exfiltrap-prototype-2\sniffer_agent\unified_sniffer_agent\build_minimal\x64\Release\ZERO_CHECK</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>E:\Year 4 Semester 2\FYP\Exfiltrap-prototype-2\sniffer_agent\unified_sniffer_agent\build_minimal\Release\MinimalSniffer.exe</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>E:\Year 4 Semester 2\FYP\Exfiltrap-prototype-2\sniffer_agent\unified_sniffer_agent\build_minimal\x64\Release\ALL_BUILD</FullPath>
+    </ProjectOutput>
+  </ProjectOutputs>
+  <ContentFiles />
+  <SatelliteDlls />
+  <NonRecipeFileRefs />
+</Project>

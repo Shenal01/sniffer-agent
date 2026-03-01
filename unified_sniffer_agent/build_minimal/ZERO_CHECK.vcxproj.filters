@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="E:\Year 4 Semester 2\FYP\Exfiltrap-prototype-2\sniffer_agent\unified_sniffer_agent\build_minimal\CMakeFiles\c9f2acd691e71b3fdf3e47b4140ddb41\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{3264BE79-4EB5-362A-8A0A-E399F3345295}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

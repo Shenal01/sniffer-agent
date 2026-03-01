@@ -1,0 +1,10 @@
+^E:\YEAR 4 SEMESTER 2\FYP\EXFILTRAP-PROTOTYPE-2\SNIFFER_AGENT\UNIFIED_SNIFFER_AGENT\BUILD_MINIMAL\CMAKEFILES\C9F2ACD691E71B3FDF3E47B4140DDB41\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SE:/Year 4 Semester 2/FYP/Exfiltrap-prototype-2/sniffer_agent/unified_sniffer_agent" "-BE:/Year 4 Semester 2/FYP/Exfiltrap-prototype-2/sniffer_agent/unified_sniffer_agent/build_minimal" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "E:/Year 4 Semester 2/FYP/Exfiltrap-prototype-2/sniffer_agent/unified_sniffer_agent/build_minimal/MinimalSnifferTest.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

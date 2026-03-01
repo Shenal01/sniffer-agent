@@ -1,0 +1,5 @@
+Write-Host "Checking Prereqs for Unified Sniffer Agent..."
+Write-Host "Please ensure:"
+Write-Host "1. Npcap is installed (WinPcap API compatible mode)"
+Write-Host "2. Visual Studio 2022 C++ Build Tools"
+Write-Host "3. Git is in PATH for vcpkg"

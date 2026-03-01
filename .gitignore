@@ -1,0 +1,33 @@
+# Build artifacts
+unified_sniffer_agent/build/
+unified_sniffer_agent/bin/
+*.exe
+*.o
+*.obj
+*.lib
+*.dll
+
+# Dependencies
+unified_sniffer_agent/external/
+node_modules/
+venv/
+.venv/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Project specific exclusions
+exfiltrap_v2.0-sniffer_agent.zip
+service-account.json
+
+# Logs
+*.log
+unified_sniffer_agent/logs/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
