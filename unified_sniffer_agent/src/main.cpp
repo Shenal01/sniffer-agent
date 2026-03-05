@@ -41,10 +41,10 @@ int main(int argc, char *argv[]) {
   fmt::print("========================================\n\n");
 
   // DB Configuration (TODO: Move to config file)
-  std::string db_host = "159.89.161.29";
-  std::string db_user = "exfiltrap_admin";
-  std::string db_pass = "Aleththa_4";
-  std::string db_name = "exfiltrap";
+  std::string db_host = "INSERT_YOUR_IP_HERE";
+  std::string db_user = "";
+  std::string db_pass = "";
+  std::string db_name = "";
 
   storage::DbWriter db_writer;
   fmt::print("Initializing Database Writer...\n");
