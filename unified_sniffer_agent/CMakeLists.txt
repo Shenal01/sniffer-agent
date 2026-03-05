@@ -4,10 +4,10 @@ project(MinimalSnifferTest VERSION 1.0.0 LANGUAGES CXX C)
 set(CMAKE_CXX_STANDARD 17)
 
 # Point to your manual Npcap SDK
-set(NPCAP_SDK_DIR "C:/NpcapSDK" CACHE PATH "Path to Npcap SDK")
+set(NPCAP_SDK_DIR "C:/Users/User/Downloads/SLIIT/SLIIT/Research-Latest/CIC-Flow-Meter-DNS/NpcapSDK" CACHE PATH "Path to Npcap SDK")
 
 # Point to your manual MariaDB Connector/C
-set(MARIADB_DIR "C:/Program Files/MariaDB/MariaDB Connector C 64-bit" CACHE PATH "Path to MariaDB Connector/C")
+set(MARIADB_DIR "C:/Users/User/Downloads/SLIIT/SLIIT/Research-Latest/CIC-Flow-Meter-DNS/MariaDB_Connector/MariaDB/MariaDB Connector C 64-bit" CACHE PATH "Path to MariaDB Connector/C")
 
 # Include directories
 include_directories(
